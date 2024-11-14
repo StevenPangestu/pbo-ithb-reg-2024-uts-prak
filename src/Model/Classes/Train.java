@@ -14,10 +14,6 @@ public class Train {
 
     }
 
-    public void getTrainDetails() {
-
-    }
-
     public int getTrainNumber() {
         return trainNumber;
     }
@@ -40,6 +36,15 @@ public class Train {
 
     public void setTrainType(TrainType trainType) {
         this.trainType = trainType;
+    }
+
+    public void getTrainDetails() {
+        System.out.println(toString());
+    }
+
+    @Override
+    public String toString() {
+        return "Train [trainNumber=" + trainNumber + ", trainName=" + trainName + ", trainType=" + trainType + "]";
     }
 
 }

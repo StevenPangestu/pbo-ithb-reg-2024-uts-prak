@@ -81,10 +81,16 @@ public class Ticket {
     }
 
     public void printTicket() {
+        System.out.println(toString());
+    }
 
+    @Override
+    public String toString() {
+        return "Ticket [ticketID=" + ticketID + ", seatNumber=" + seatNumber + ", price=" + price + ", classType="
+                + classType + ", status=" + status + ", onlinePayment=" + onlinePayment + ", train=" + train + "]";
     }
 
     public void getTicketStatus() {
-
+        System.out.println(status);
     }
 }

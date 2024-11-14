@@ -45,6 +45,13 @@ public class Passenger {
     }
 
     public void getPassengerInfo() {
-
+        System.out.println(toString());
     }
+
+    @Override
+    public String toString() {
+        return "Passenger [passengerID=" + passengerID + ", passengerName=" + passengerName + ", passengerGender="
+                + passengerGender + ", passengerAge=" + passengerAge + ", ticket=" + ticket + "]";
+    }
+
 }
