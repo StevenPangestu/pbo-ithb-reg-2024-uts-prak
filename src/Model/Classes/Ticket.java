@@ -9,13 +9,12 @@ public class Ticket {
     private TicketStatus status;
     private OnlinePayment onlinePayment;
     private Train train;
-    private int[] seat = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
 
     public Ticket(String ticketID, double price, String seatNumber, ClassType classType, TicketStatus status,
             Train train) {
         this.ticketID = ticketID;
-        this.seatNumber = seatNumber;
         this.price = price;
+        this.seatNumber = seatNumber;
         this.classType = classType;
         this.status = status;
         this.train = train;
@@ -37,12 +36,8 @@ public class Ticket {
 
     public void setSeatNumber(String seatNumber) {
 
-        if (seat[Integer.valueOf(seatNumber)] == 0) {
-            seat[Integer.valueOf(seatNumber)] = 1;
-            this.seatNumber = seatNumber;
-        } else {
-            System.out.println("Seat udah diambil orang lain akowkoakowka ");
-        }
+        this.seatNumber = seatNumber;
+
     }
 
     public double getPrice() {
